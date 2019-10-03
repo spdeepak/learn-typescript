@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "tslint:latest",
+    "tslint-config-prettier"
+  ],
+  "rulesDirectory": [
+    "tslint-plugin-prettier"
+  ],
+  "rules": {
+    "prettier": true,
+    "max-classes-per-file": false,
+    "object-literal-sort-keys": false,
+    "no-implicit-dependencies": [
+      true,
+      "dev"
+    ],
+    "no-submodule-imports": false,
+    "max-file-line-count": [
+      true,
+      500
+    ],
+    "no-unused-expression": false
+  }
+}

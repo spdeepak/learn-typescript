@@ -1,0 +1,35 @@
+{
+  "name": "learn-typescript",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "ts-node-dev --respawn --no-notify src Deepak | bunyan -o short"
+  },
+  "dependencies": {
+    "@buynomics/bn-config": "^0.9.6",
+    "bunyan": "^1.8.12",
+    "class-transformer": "^0.2.3",
+    "class-validator": "0.9.1",
+    "kcors": "^2.2.2",
+    "koa": "^2.8.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
+    "reflect-metadata": "^0.1.13",
+    "routing-controllers": "^0.8.0",
+    "typescript": "^3.6.3"
+  },
+  "devDependencies": {
+    "@types/bunyan": "^1.8.6",
+    "@types/kcors": "^2.2.3",
+    "@types/koa": "^2.0.50",
+    "@types/koa-bodyparser": "^4.3.0",
+    "@types/koa-router": "^7.0.42",
+    "@types/node": "^12.7.9",
+    "@types/reflect-metadata": "^0.1.0",
+    "prettier": "^1.18.2",
+    "ts-node-dev": "^1.0.0-pre.43",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.0.1"
+  }
+}
