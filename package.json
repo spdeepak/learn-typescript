@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "ts-node-dev --respawn --no-notify src Deepak | bunyan -o short"
+    "start": "ts-node-dev --respawn --no-notify src | bunyan -o short"
   },
   "dependencies": {
     "@buynomics/bn-config": "^0.9.6",
@@ -14,8 +14,10 @@
     "koa": "^2.8.2",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
+    "mongodb": "^3.3.2",
     "reflect-metadata": "^0.1.13",
     "routing-controllers": "^0.8.0",
+    "typeorm": "^0.2.19",
     "typescript": "^3.6.3"
   },
   "devDependencies": {
