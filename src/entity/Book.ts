@@ -1,11 +1,11 @@
-import { Entity, Column, ObjectIdColumn, ObjectID } from "typeorm";
+import { Column, Entity, ObjectID, ObjectIdColumn } from 'typeorm'
 
 @Entity()
 export class Book {
   @ObjectIdColumn()
-  _id: ObjectID;
+  public _id: ObjectID
   @Column()
-  title: string;
+  public title: string
   @Column()
-  name: string;
+  public name: string
 }
