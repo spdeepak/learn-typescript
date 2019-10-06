@@ -18,8 +18,7 @@ export class BookController {
   @Get('/books')
   public async getAllBooks() {
     try {
-      const books = await this.bookRepository.find()
-      return books
+      return await this.bookRepository.find()
     } catch (_err) {
       throw new NotFoundError('Books Not found')
     }
@@ -27,14 +26,17 @@ export class BookController {
 
   @Get('/book/:id')
   public getBookByID(@Param('id') id: string) {
-    return this.bookRepository.findOne(id)
+    logger.info(`Finding Book for id ${id}`)
+    return this.bookRepository.find({
+      where: {
+        title: { $regex: `.*${id}.*` },
+      },
+    })
   }
 
   @Post('/book')
   public async createBook(@Body({ required: true }) book: Book) {
     try {
-      logger.info(`Saving book: ${book}`)
-      logger.info('::', JSON.stringify(book))
       return await this.bookRepository.save(book)
     } catch (err) {
       logger.error(`Error saving book ${err}`)
