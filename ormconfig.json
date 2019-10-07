@@ -1,17 +1,13 @@
 {
-    "type": "mongodb",
+    "type": "postgres",
     "host": "localhost",
-    "port": 27017,
-    "username": "root",
-    "password": "root",
-    "database": "localhost",
-    "authSource": "admin",
+    "port": 5432,
+    "username": "postgres",
+    "password": "postgres",
+    "database": "typescript",
     "synchronize": true,
     "entities": [
         "src/entity/*.js",
         "src/entity/*.ts"
-    ],
-    "cli": {
-        "entitiesDir": "src/entity"
-    }
+    ]
 }

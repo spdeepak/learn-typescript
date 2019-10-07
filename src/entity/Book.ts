@@ -1,11 +1,9 @@
-import { Transform } from 'class-transformer'
-import { Column, Entity, ObjectID, ObjectIdColumn } from 'typeorm'
+import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
 
 @Entity()
 export class Book {
-  @ObjectIdColumn()
-  @Transform((id: ObjectID) => id.toHexString(), { toPlainOnly: true })
-  public _id: ObjectID
+  @PrimaryGeneratedColumn()
+  public id: number
   @Column()
   public title: string
   @Column()
