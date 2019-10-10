@@ -2,4 +2,3 @@ server:
   port: 8080
 logger:
   name: learn-typescript
-  level: info

@@ -17,7 +17,7 @@
     "no-submodule-imports": false,
     "max-file-line-count": [
       true,
-      500
+      1000
     ],
     "no-unused-expression": false
   }
