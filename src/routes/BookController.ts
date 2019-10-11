@@ -20,7 +20,7 @@ export class BookController {
   public async getAllBooks() {
     try {
       const books = await this.bookRepository.find({
-        relations: ['authors'],
+        relations: ['authors', 'bookDetail'],
       })
       return books
     } catch (_err) {
@@ -30,7 +30,9 @@ export class BookController {
 
   @Get('/book/:id')
   public getBookByID(@Param('id') id: string) {
-    return this.bookRepository.findOne(id)
+    return this.bookRepository.findOne(id, {
+      relations: ['authors', 'bookDetail'],
+    })
   }
 
   @Post('/book')
